@@ -1,1 +1,18 @@
-// Code your solution here
+function findMatching(drivers, name) {
+    return drivers.filter(function (driver) {
+    return driver.toUpperCase().match(name.toUpperCase()) 
+})
+}
+
+function fuzzyMatch(drivers, letter) {
+    return drivers.filter(function (driver) {
+        return driver.startsWith(letter)
+})
+}
+
+function matchName(drivers, name) {
+    return drivers.filter(function (driver){
+        return driver.name.match(name)
+    })
+} 
+
